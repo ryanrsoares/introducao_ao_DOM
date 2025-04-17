@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+</head>
+<style>
+    .alinhado {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .alinhado2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Camisetas</h1>
+    </header>
+    <main>
+        <div class="alinhado">
+            <p>Camiseta Preta - R$50</p>
+            <button onclick="Carrinho('Camiseta Preta')">Adicionar</button>
+        </div>
+        <div class="alinhado2">
+            <p>Camiseta Branca - R$40</p>
+            <button onclick="Carrinho('Camisa Branca')">Adicionar</button>
+        </div>
+        <h3>Carrinho:</h3>
+        <ul id="lista_do_carrinho">
+
+          </ul>
+        <p>Total: R$0.00</p>
+
+    </main>
+    <footer></footer>
+</body>
+<script>
+    function Carrinho(item) {
+      const lista = document.getElementById("lista_do_carrinhoz");
+      const li = document.createElement("li");
+      li.textContent = item;
+      lista.appendChild(li);
+    }
+  </script>
+
+</html>

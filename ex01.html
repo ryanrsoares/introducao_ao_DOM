@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-1</title>
+</head>
+<body>
+    <!-- <p id="exemplo1"></p>
+    <script>
+        document.getElementById("exemplo1").innerHTML = "olá Mundo!!";
+    </script> -->
+    <header>
+        <h1>Lista de tarefas</h1>
+    </header>
+    
+    <main>
+        <input type="text" name="" id="tarefa" placeholder="digite um item">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="lista_de_tarefas">
+            <!-- <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li> -->
+            
+        </ul>
+    </main>
+
+    <footer></footer>
+</body>
+    <script>
+
+        function adicionarTarefa(){
+            //cadastrar um item na lista
+                    //1 - preciso ter o valor escuto da tarefa pelo meu usuario
+    
+                let valorInput = document.getElementById("tarefa").value;
+                console.log(valorInput);
+                    //2 - cirar a tarefa na lista
+                let itemLista = document.createElement("li");
+                itemLista.innerText = valorInput;
+
+                //estarei cadastrando um novo item abaixo do anterior
+                document.getElementById("lista_de_tarefas").appendChild(itemLista);
+
+                    //3 - botão de excluir
+
+                let botaoExcluir = document.createElement("button");
+                botaoExcluir.innerText = "remover item";
+                itemLista.appendChild(botaoExcluir);
+
+                    //4 - assim que eu clicar no botao excluir, ele irá sair junto com o item
+
+
+                // botaoExcluir.onclick = function(){
+                //     itemLista.remove();
+                // }
+
+
+
+                // botaoExcluir : isso é a variavel q iremos usar para excluir o novo botão criado
+                // .onclick : nesse serve para coseguir remover o botão da tela após clicar
+                // () => : seria a função que iremos usar
+                // itemLista.remove(); : serve para remover o item adicionado 
+                
+                botaoExcluir.onclick = () => {
+                    itemLista.remove();
+                }
+                // document.getElementById : serve para pegar um atribulo especifico pelo id dele
+                // .value = ""; : serve para poder eliminar o item escrito na caixa de texto
+
+                document.getElementById("tarefa").value = ""; 
+        }
+    </script>
+</html>

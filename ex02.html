@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modo Escuro/claro</title>
+</head>
+<body id="fundo">
+    <header>
+        <h1 id="texto">Modo Claro/Escuro</h1>
+    </header>
+    <main>
+        <button onclick="trocar_tema()">Trocar Tema</button>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    function trocar_tema(){
+        // document.getElementById("fundo").style.backgroundColor = "Black";
+        // document.getElementById("texto").style.color = "white";
+
+        if (document.getElementById("fundo").style.backgroundColor === "white") {
+            document.getElementById("fundo").style.backgroundColor = "Black";
+            document.getElementById("texto").style.color = "white";
+        } else {
+            document.getElementById("fundo").style.backgroundColor = "white";
+            document.getElementById("texto").style.color = "black";
+        }
+
+    }
+</script>
+</html>
